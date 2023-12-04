@@ -24,8 +24,8 @@ SECRET_KEY = 'django-insecure-cizn7w)mki-0=r78t(%e-exy0l85@b6qhf8t_k%6p#&z5wty=o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
-CSRF_TRUSTED_ORIGINS = os.environ.get("CSRF_TRUSTED_ORIGINS").split(" ")
+ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", "").split()
+CSRF_TRUSTED_ORIGINS = os.environ.get("CSRF_TRUSTED_ORIGINS", "").split()
 
 # Application definition
 
@@ -59,6 +59,7 @@ MIDDLEWARE = [
 CORS_ALLOWED_ORIGINS = [
     "https://coxel.ru",
     "http://coxel.ru",
+    "http://localhost:5173",
     "http://localhost",
 ]
 
