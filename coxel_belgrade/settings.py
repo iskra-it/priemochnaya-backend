@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-cizn7w)mki-0=r78t(%e-exy0l85@b6qhf8t_k%6p#&z5wty=o'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", "").split()
 CSRF_TRUSTED_ORIGINS = os.environ.get("CSRF_TRUSTED_ORIGINS", "").split()
@@ -57,8 +57,8 @@ MIDDLEWARE = [
 
 
 CORS_ALLOWED_ORIGINS = [
-    "https://coxel.ru",
-    "http://coxel.ru",
+    "https://iskra.foundation",
+    "http://iskra.foundation",
     "http://localhost:5173",
     "http://localhost",
     "http://localhost:5432",
